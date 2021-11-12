@@ -54,7 +54,7 @@ jobs:
         if: ${{ startsWith(matrix.os, 'macos-') }}
         uses: actions/upload-artifact@v2
         with:
-          name: QMK-XAP_macOS.dmg.zip
+          name: QMK-XAP_macOS.dmg
           path: dist_electron/QMK XAP*.dmg
           if-no-files-found: error
 
@@ -62,7 +62,7 @@ jobs:
         if: ${{ startsWith(matrix.os, 'ubuntu-') }}
         uses: actions/upload-artifact@v2
         with:
-          name: QMK-XAP_Linux.AppImage.zip
+          name: QMK-XAP_Linux.AppImage
           path: dist_electron/QMK XAP*.AppImage
           if-no-files-found: error
 
@@ -70,6 +70,6 @@ jobs:
         if: ${{ startsWith(matrix.os, 'windows-') }}
         uses: actions/upload-artifact@v2
         with:
-          name: QMK-XAP_Windows.exe.zip
+          name: QMK-XAP_Windows.exe
           path: dist_electron/QMK XAP*.exe
           if-no-files-found: error
